@@ -9,6 +9,7 @@
   ],
   "host_permissions": [
     "https://mail.google.com/*",
+    "https://github.com/*",
     "http://localhost:8080/*"
   ],
   "background": {
@@ -18,6 +19,11 @@
     {
       "matches": ["https://mail.google.com/*"],
       "js": ["content.js"],
+      "css": ["styles.css"]
+    },
+    {
+      "matches": ["https://github.com/*"],
+      "js": ["github_content.js"],
       "css": ["styles.css"]
     }
   ]

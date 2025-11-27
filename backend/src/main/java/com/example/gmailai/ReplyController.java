@@ -21,7 +21,7 @@ public class ReplyController {
 
     @PostMapping("/reply")
     public ReplyResponse generateReply(@RequestBody ReplyRequest request) {
-        String reply = aiService.generateReply(request.getContent());
+        String reply = aiService.generateReply(request);
         return new ReplyResponse(reply);
     }
 }
