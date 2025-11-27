@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Gmail AI Reply",
+  "version": "1.0",
+  "description": "Generate AI replies for Gmail using a Spring Boot backend.",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://mail.google.com/*",
+    "http://localhost:8080/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://mail.google.com/*"],
+      "js": ["content.js"],
+      "css": ["styles.css"]
+    }
+  ]
+}
